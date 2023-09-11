@@ -19,7 +19,7 @@ jobs:
     # https://github.community/t/github-actions-does-not-respect-skip-ci/17325/8
     if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up Python 3.x
       uses: actions/setup-python@v4
       with:
@@ -42,7 +42,7 @@ jobs:
           - platform: windows-latest
             python-version: 3.8
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v4
       with:
@@ -72,7 +72,7 @@ jobs:
     runs-on: ubuntu-latest
     if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up Python 3.x
       uses: actions/setup-python@v4
       with:
@@ -86,7 +86,7 @@ jobs:
     runs-on: ubuntu-latest
     if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up Python pypy3
       uses: actions/setup-python@v4
       with:
