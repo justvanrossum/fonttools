@@ -21,7 +21,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.x
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: "3.x"
     - name: Install packages
@@ -44,7 +44,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install packages
@@ -74,7 +74,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.x
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: "3.11"
     - name: Install packages
@@ -88,7 +88,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python pypy3
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: "pypy-3.8"
     - name: Install packages
